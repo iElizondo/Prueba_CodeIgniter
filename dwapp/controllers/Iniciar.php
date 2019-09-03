@@ -29,6 +29,7 @@ class Iniciar extends CI_Controller {
 
 		#echo password_hash( "123123", PASSWORD_BCRYPT, array("cost" => 10) );
 
+		// El if trata de iniciar sesion si lo logra redireciona
 		if($this->sesion->iniciar()){
 			redirect("/facturas/", "refresh");
 		}
