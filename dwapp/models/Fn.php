@@ -14,118 +14,6 @@ class Fn extends CI_Model {
 		$this->cl  =& get_instance();
 	}
 
-// 	function tiempoTranscurrido($fechaInicio, $fechaFin)
-// 	{
-// 	    $fecha1 = new DateTime($fechaInicio);
-// 	    $fecha2 = new DateTime($fechaFin);
-// 	    $fecha = $fecha1->diff($fecha2);
-// 	    $tiempo = "";
-
-// 	    //años
-// 	    if($fecha->y > 0)
-// 	    {
-// 	        $tiempo .= $fecha->y;
-
-// 	        if($fecha->y == 1)
-// 	            $tiempo .= " año, ";
-// 	        else
-// 	            $tiempo .= " años, ";
-// 	    }
-
-// 	    //meses
-// 	    if($fecha->m > 0)
-// 	    {
-// 	        $tiempo .= $fecha->m;
-
-// 	        if($fecha->m == 1)
-// 	            $tiempo .= " mes, ";
-// 	        else
-// 	            $tiempo .= " meses, ";
-// 	    }
-
-// 	    //dias
-// 	    if($fecha->d > 0)
-// 	    {
-// 	        $tiempo .= $fecha->d;
-
-// 	        if($fecha->d == 1)
-// 	            $tiempo .= " día, ";
-// 	        else
-// 	            $tiempo .= " días, ";
-// 	    }
-
-// 	    //horas
-// 	    if($fecha->h > 0)
-// 	    {
-// 	        $tiempo .= $fecha->h;
-
-// 	        if($fecha->h == 1)
-// 	            $tiempo .= " hora, ";
-// 	        else
-// 	            $tiempo .= " horas, ";
-// 	    }
-
-// 	    //minutos
-// 	    if($fecha->i > 0)
-// 	    {
-// 	        $tiempo .= $fecha->i;
-
-// 	        if($fecha->i == 1)
-// 	            $tiempo .= " minuto";
-// 	        else
-// 	            $tiempo .= " minutos";
-// 	    }
-// 	    else if($fecha->i == 0) //segundos
-// 	        $tiempo .= $fecha->s." segundos";
-
-// 	    return $tiempo;
-// 	}
-
-// 	public function tildes($string){
-// 		 $string = htmlentities($string);
-// 		 $string = preg_replace('/\&(.)[^;]*;/', '\\1', $string);
-// 		 return $string;
-// 	}
-
-// 	public function limpiar( $str )
-// 	{
-// 		$str = $this->tildes($str);
-// 		$str = preg_replace(array('/[^a-zA-Z0-9 \'-]/', '/[ -\']+/', '/^-|-$/'), array('', '_', ''), $str);
-// 		$str = preg_replace('/-inc$/i', '', $str);
-// 		return strtolower($str);
-// 	}
-
-// 	public function HayInternet()
-// 	{
-// 	    $connected = @fsockopen("www.google.com", 80);
-// 	    if ($connected){
-// 	        fclose($connected);
-// 	        return true;
-// 	    }
-// 	    return false;
-// 	}
-
-// 	public function metodoPrincipal()
-// 	{
-// 		return "/".$this->cl->router->class."/";
-// 	}
-
-// 	public function buscarArrayMult($array, $search, $keys = array())
-// 	{
-// 	    foreach($array as $key => $value) {
-// 	        if (is_array($value)) {
-// 	            $sub = $this->buscarArrayMult($value, $search, array_merge($keys, array($key)));
-// 	            if (count($sub)) {
-// 	                return $sub;
-// 	            }
-// 	        } elseif ($value === $search) {
-// 	            return array_merge($keys, array($key));
-// 	        }
-// 	    }
-
-// 	    return array();
-// 	}
-
 	public function paginacion($total)
 	{
 		$pagina = ! empty( $this->sql->pagina_act ) ? $this->sql->pagina_act : 1 ;
@@ -257,185 +145,49 @@ class Fn extends CI_Model {
 		}
 	}
 
-// 	public function fecha_mysql($fecha)
-// 	{
-// 		if( ! empty( $fecha ) ){
-// 			return date("Y-m-d", strtotime(str_replace("/", "-", $fecha)));
-// 		} else {
-// 			return '';
-// 		}
-// 	}
-
-// 	public function formatoFecha($fecha, $verhora=FALSE)
-// 	{
-
-// 		$hora = date(' - h:ia', strtotime($fecha)); /* . '+1 hour'*/
-// 		if($verhora){
-// 			return strftime("%d %B de %Y", strtotime($fecha)) . $hora;
-// 		}else{
-// 			return strftime("%d %B de %Y", strtotime($fecha));
-// 		}
-// 	}
-
-// 	public function fecha_campo($fecha)
-// 	{
-// 		if( ! empty( $fecha ) ){
-// 			return date("d/m/Y", strtotime(str_replace("-", "/", $fecha)));
-// 		} else {
-// 			return '';
-// 		}
-// 	}
-
-// 	public function json_encode_advanced(array $arr, $sequential_keys = false, $quotes = true, $beautiful_json = false)
-// 	{
-
-// 	    $output = $this->isAssoc($arr) ? "{" : "[";
-// 	    $count = 0;
-// 	    foreach ($arr as $key => $value) {
-
-// 	        if ($this->isAssoc($arr) || (!$this->isAssoc($arr) && $sequential_keys == true )) {
-// 	            $output .= ($quotes ? '"' : '') . $key . ($quotes ? '"' : '') . ' : ';
-// 	        }
-
-// 	        if (is_array($value)) {
-// 	            $output .= $this->json_encode_advanced($value, $sequential_keys, $quotes, $beautiful_json);
-// 	        } else if (is_bool($value)) {
-// 	            $output .= ($value ? 'true' : 'false');
-// 	        } /*else if (is_numeric($value)) {
-// 	            $output .= $value;
-// 	        }*/ else {
-// 	            $output .= ($quotes || $beautiful_json ? '"' : '') . $value . ($quotes || $beautiful_json ? '"' : '');
-// 	        }
-
-// 	        if (++$count < count($arr)) {
-// 	            $output .= ', ';
-// 	        }
-// 	    }
-// 	    $output .= $this->isAssoc($arr) ? "}" : "]";
-// 	    return $output;
-// 	}
-
-// 	public function isAssoc(array $arr)
-// 	{
-// 		 if (array() === $arr) return false;
-// 		 return array_keys($arr) !== range(0, count($arr) - 1);
-// 	}
-
-// 	public function CrearPDF( $id, $vista, $descargar = TRUE, $nombre = FALSE )
-// 	{
-// 		$this->load->library('ciqrcode');
-// 		$this->load->helper('dompdf');
 
 
-// 		$data = new stdClass();
-// 		$data->vista = "app/pdfs/" . $vista;
-// 		$archivo =  "comprobante-" . $id;
-// 		if($nombre){
-// 			$archivo = $nombre;
-// 		}
-// 		$data->tipo = $archivo;
-// 		$data->id = $id;
-// 		$data->descargar = $descargar;
+	public function menu()
+	{
+		$menu = $this->config->item('menu');
 
-// 		$html = $this->load->view($data->vista, array('id' => $data->id), TRUE);
-// 		/*echo $html;
-// 		exit;*/
-// 		return pdf_create($html, $data->tipo, TRUE, $data->descargar);
-// 	}
+		foreach ($menu as $categoria => $items) {
 
-// 	public function verPDF( $id, $vista, $descargar = TRUE, $nombre = FALSE )
-// 	{
-// 		$this->load->helper('dompdf');
+			$categoria ='<li class="nav-item active">
+							<a class="nav-link" href="#">
+								<i class="'.$items['icono_categoria'].'"></i>
+								<span>'.$categoria.'</span>
+							</a>
+						</li>';
 
-// 		$data = new stdClass();
-// 		$data->vista = "app/pdfs/" . $vista;
-// 		$archivo =  "comprobante-" . $id;
-// 		if($nombre){
-// 			$archivo = $nombre;
-// 		}
-// 		$data->tipo = $archivo;
-// 		$data->id = $id;
-// 		$data->descargar = $descargar;
 
-// 		$html = $this->load->view($data->vista, array('id' => $data->id), TRUE);
-// 		return pdf_create($html, $data->tipo, TRUE, TRUE, false);
-// 	}
+			// $c = '<li class="nav-item active nav-link">'.$categoria.'</li>';
+			$links     = '';
 
-// 	public function permisosSeccion($idRol)
-// 	{
-// 		if( empty( $this->rolSecciones ) ){
-// 			$configConsulta = array(
-// 				'tabla'       => 'roles',
-// 				'seleccionar' => 'secciones',
-// 				'nolimite'    => TRUE,
-// 				'condiciones' => array(
-// 					'id' => $idRol
-// 				),
-// 				'tipo'        => 'row'
-// 			);
-// 			$this->rolSecciones = unserialize( $this->sql->consultar( $configConsulta )->secciones );
-// 		}
+			foreach ($items['enlaces'] as $id_menu => $parametros) {
 
-// 	}
+				/*if( ! $this->fn->tienePermiso( $id_menu ) ){
+					continue;
+				}*/
+				$active = '';
+				// if($this->router->class == $parametros['url']){
+				// 	$active = "active";
+				// }
 
-// 	public function tienePermiso($idSeccion)
-// 	{
-// 		$this->permisosSeccion( $this->session->userdata('idRol') );
-// 		if(in_array($idSeccion, $this->rolSecciones)){
-// 			return TRUE;
-// 		}
-// 		return FALSE;
-// 	}
+				$links .= '<li class="nav-item">
+								<a class="nav-link" href="'.base_url().''. $parametros['url'].'/">
+								<i class="'. $parametros['class_icon'].'"></i>
+								<span>'.$parametros['anchor'].'</span></a>
+							</li>';
+			}
 
-// 	public function validarPermisos()
-// 	{
-// 		$this->permisosSeccion( $this->session->userdata('idRol') );
-// 		$menu = $this->config->item('menu');
-// 		$this->idSeccion = $this->buscarArrayMult($menu, $this->cl->router->class);
-// 		if( ! empty($this->idSeccion) ){
-// 			if( ! in_array($this->idSeccion[1], $this->rolSecciones)){
-// 				show_error('El usuario actual no tiene permisos para visualizar está sección', 200, 'No tienes permisos');
-// 			}
-// 		} else {
-// 			show_error('Permisos del Controlador no encontrados', 200, 'No resultados');
-// 		}
-// 	}
+			if($links != ''){
+				echo $categoria;
+			}
+			echo $links;
 
-// 	public function menu()
-// 	{
-// 		$menu = $this->config->item('menu');
-
-// 		foreach ($menu as $categoria => $items) {
-
-// 			$categoria = '<li class="site-menu-category">'.$categoria.'</li>';
-// 			$links     = '';
-
-// 			foreach ($items as $id_menu => $parametros) {
-
-// 				if( ! $this->fn->tienePermiso( $id_menu ) ){
-// 					continue;
-// 				}
-// 				$active = '';
-// 				if($this->router->class == $parametros['url']){
-// 					$active = "active";
-// 				}
-// 				$links .= '
-// 				<li class="site-menu-item has-sub '.$active.'">
-// 					<a href="'.base_url().''. $parametros['url'].'/">
-// 					<i class="site-menu-icon '. $parametros['class_icon'].'" aria-hidden="true"></i>
-// 					<span class="site-menu-title">'.$parametros['anchor'].'</span>
-// 					</a>
-// 				</li>
-// 				';
-// 			}
-
-// 			if($links != ''){
-// 				echo $categoria;
-// 			}
-// 			echo $links;
-
-// 		}
-// 	}
+		}
+	}
 
 // 	public function getBuscar()
 // 	{

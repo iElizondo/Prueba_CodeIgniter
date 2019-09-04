@@ -226,7 +226,7 @@ $config['allow_get_array'] = TRUE;
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 1;
 
 /*
 |--------------------------------------------------------------------------
@@ -315,7 +315,21 @@ $config['cache_path'] = '';
 |
 */
 $config['cache_query_string'] = FALSE;
+/* Menú */
+$config['menu'] = array(
 
+    'Registros' => array(
+        'icono_categoria'=>'fas fa-file-medical',
+        'enlaces'=> array(
+            'servicio' => array(
+                'anchor'     => 'Productos',
+                'url'        => 'servicios',
+                'class_icon' => 'fas fa-list'
+            )
+        )
+    )
+ );
+/* Fin configuracion menu */ 
 /*
 |--------------------------------------------------------------------------
 | Encryption Key
