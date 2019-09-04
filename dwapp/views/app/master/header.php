@@ -19,7 +19,7 @@
   <link href="tema/css/sb-admin.css" rel="stylesheet">
 
   <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="tema/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
 </head>
 

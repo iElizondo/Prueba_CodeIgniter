@@ -60,9 +60,9 @@ class Sesion extends CI_Model {
 	function crear( $consulta )
 	{
 		$newdata = array(
-		   'id_usuario' => $consulta->id,
+			'id_usuario' => $consulta->id,
 			'idRol'      => $consulta->rol,
-		   'conectado'  => TRUE
+			'conectado'  => TRUE
 		);
 		$this->session->set_userdata($newdata);
 	}
