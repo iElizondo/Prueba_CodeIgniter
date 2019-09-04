@@ -189,12 +189,12 @@ class Fn extends CI_Model {
 		}
 	}
 
-// 	public function getBuscar()
-// 	{
-// 		if( ! empty( $buscar = $this->input->get('buscar', TRUE) ) ){
-// 			return $buscar;
-// 		}
-// 	}
+	public function getBuscar()
+	{
+		if( ! empty( $buscar = $this->input->get('buscar', TRUE) ) ){
+			return $buscar;
+		}
+	}
 
 // 	public function colon($valor, $tipo = 0)
 // 	{

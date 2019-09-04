@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-dark">
+<body class="<?=(!empty($body_class)?$body_class:'')?>">
 
 <!-- Header -->
 <?php 

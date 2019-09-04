@@ -323,7 +323,7 @@ $config['menu'] = array(
         'enlaces'=> array(
             'servicio' => array(
                 'anchor'     => 'Productos',
-                'url'        => 'servicios',
+                'url'        => 'producto',
                 'class_icon' => 'fas fa-list'
             )
         )

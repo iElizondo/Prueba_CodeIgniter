@@ -22,6 +22,7 @@ class IniciarSesion extends CI_Controller {
 	public function index()
 	{
 		$this->data['titulo']      = 'Facturacion Selva Mar';
+		$this->data['body_class']  = "bg-dark";
 		// El if trata de iniciar sesion si lo logra redireciona
 		if($this->sesion->iniciar()){
 			redirect("escritorio", "refresh");
