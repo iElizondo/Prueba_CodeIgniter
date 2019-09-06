@@ -15,10 +15,10 @@ class Sql extends CI_Model {
 		}
 	}
 
-	// public function query($query)
-	// {
-	// 	return $this->db->query( $query );
-	// }
+	public function query($query)
+	{
+		return $this->db->query( $query );
+	}
 
 	function consultar ( $data )
 	{
@@ -153,41 +153,41 @@ class Sql extends CI_Model {
 	}
 
 
-// 	function insertar ( $config )
-// 	{
-// 		$config = $this->ValConfig( $config );
+	function insertar ( $config )
+	{
+		$config = $this->ValConfig( $config );
 
-// 		if( isset($config['data']) and !empty($config['data']) ){
-// 			$data = $config['data'];
-// 			$ejecutar = TRUE;
-// 		} else {
-// 			$data = $this->FiltrarPost($config['fn1']);
-// 			$ejecutar = ! empty($data) && $this->formulario->validar() ? TRUE : FALSE;
-// 		}
+		if( isset($config['data']) and !empty($config['data']) ){
+			$data = $config['data'];
+			$ejecutar = TRUE;
+		} else {
+			$data = $this->FiltrarPost($config['fn1']);
+			$ejecutar = ! empty($data) && $this->formulario->validar() ? TRUE : FALSE;
+		}
 
-// 		$columnUsuario = $this->query("SHOW COLUMNS FROM ".$config['tabla']." WHERE Field = 'id_usuario'")->num_rows();
+		$columnUsuario = $this->query("SHOW COLUMNS FROM ".$config['tabla']." WHERE Field = 'id_usuario'")->num_rows();
 
-// 		if($columnUsuario){
-// 			$data['id_usuario'] = $this->session->userdata('id_usuario');
-// 		}
+		if($columnUsuario){
+			$data['id_usuario'] = $this->session->userdata('id_usuario');
+		}
 		
 
-// 		if( $ejecutar )
-// 		{
-// 		    if($config['tabla'] == 'facturas'){
-// 		        $data['fecha_registro'] = date("Y-m-d H:i:s");
-// 		    }
-// 			$this->db->insert($config['tabla'], $data);
-// 			$id = $this->db->insert_id();
+		if( $ejecutar )
+		{
+		    if($config['tabla'] == 'facturas'){
+		        $data['fecha_registro'] = date("Y-m-d H:i:s");
+		    }
+			$this->db->insert($config['tabla'], $data);
+			$id = $this->db->insert_id();
 
-// 			if ( isset($config['fn2']) ) {
-// 				$this->FnCL($config['fn2'], $id);
-// 			}
+			if ( isset($config['fn2']) ) {
+				$this->FnCL($config['fn2'], $id);
+			}
 
-// 			return $id;
-// 		}
+			return $id;
+		}
 
-// 	}
+	}
 
 // 	function actualizar ( $config )
 // 	{
@@ -240,70 +240,70 @@ class Sql extends CI_Model {
 
 // 	/* Funciones Internas */
 
-// 	private function FiltrarPost($fn)
-// 	{
-// 		$data = $this->input->post(NULL, TRUE);
+	private function FiltrarPost($fn)
+	{
+		$data = $this->input->post(NULL, TRUE);
 
-// 		unset($data['form']);
-// 		unset($data['accion']);
+		unset($data['form']);
+		unset($data['accion']);
 
 
 
-// 		if( !empty( $data ) ){
-// 			$data = $this->FnCL($fn, $data);
+		if( !empty( $data ) ){
+			$data = $this->FnCL($fn, $data);
 
-// 			if( is_array($data) )
-// 			{
+			if( is_array($data) )
+			{
 
-// 				/* Serializamos los Arrays */
-// 				foreach ($data as $key => $value) {
-// 					if(is_array($value)){
-// 						$data_return[$key] = serialize($value);
-// 					} else {
-// 						$data_return[$key] = $value;
-// 					}
-// 				}
-// 				return $data_return;
-// 			} else {
-// 				show_error('Los datos para SQL no son array', 200, 'Datos no válidos');
-// 			}
-// 		}
+				/* Serializamos los Arrays */
+				foreach ($data as $key => $value) {
+					if(is_array($value)){
+						$data_return[$key] = serialize($value);
+					} else {
+						$data_return[$key] = $value;
+					}
+				}
+				return $data_return;
+			} else {
+				show_error('Los datos para SQL no son array', 200, 'Datos no válidos');
+			}
+		}
 
-// 	}
+	}
 
 // 	/* Ejecuta función del controlador */
 
-// 	private function FnCL($fn, $data = NULL)
-// 	{
-// 		if( $fn != NULL )
-// 		{
-// 			if( method_exists($this->cl, $fn) )
-// 			{
-// 				$data = $this->cl->$fn( $data );
-// 			} else {
-// 				show_error('CL: ' . $this->cl->router->class, 200, 'Método "<b>'.$fn.'</b>" no encontrado');
-// 			}
-// 		}
+	private function FnCL($fn, $data = NULL)
+	{
+		if( $fn != NULL )
+		{
+			if( method_exists($this->cl, $fn) )
+			{
+				$data = $this->cl->$fn( $data );
+			} else {
+				show_error('CL: ' . $this->cl->router->class, 200, 'Método "<b>'.$fn.'</b>" no encontrado');
+			}
+		}
 
-// 		return $data;
+		return $data;
 
-// 	}
+	}
 
 // 	/* Validar cofiguración de consultas */
 
-// 	private function ValConfig($config)
-// 	{
-// 		if(is_array($config)){
-// 			$campos = array('tabla', 'data', 'fn1', 'fn2', 'where', 'join', 'nolimite', 'order');
-// 			foreach ($campos as $k => $key) {
-// 				if(!array_key_exists($key, $config)){
-// 					$config[$key] = NULL;
-// 				}
-// 			}
-// 			return $config;
-// 		} else {
-// 			show_error('CL: ' . $this->cl->router->class, 200, 'Config SQL no tiene formato Array');
-// 		}
-// 	}
+	private function ValConfig($config)
+	{
+		if(is_array($config)){
+			$campos = array('tabla', 'data', 'fn1', 'fn2', 'where', 'join', 'nolimite', 'order');
+			foreach ($campos as $k => $key) {
+				if(!array_key_exists($key, $config)){
+					$config[$key] = NULL;
+				}
+			}
+			return $config;
+		} else {
+			show_error('CL: ' . $this->cl->router->class, 200, 'Config SQL no tiene formato Array');
+		}
+	}
 
 }

@@ -21,6 +21,9 @@
   <!-- Page level plugin CSS-->
   <link href="tema/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
+  <!-- Mis estilos -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/estilos/estilos.css">
+
 </head>
 
 <body class="<?=(!empty($body_class)?$body_class:'')?>">
