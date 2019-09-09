@@ -18,8 +18,8 @@
             <td><?php echo $item_producto['id']; ?></td>
             <td><?php echo $item_producto['tarifa_iva']; ?></td>
             <td><?php echo $item_producto['nombre']; ?></td>
-            <td><a class="btn boton btn-redomdo b-editar" href="<?php echo site_url('producto/formulario/'.$item_producto['id']); ?>">Editar</a>
-                <a class="btn boton btn-redomdo b-eliminar" href="<?php echo site_url('producto/delete/'.$item_producto['id']); ?>">Eliminar</a>
+            <td><a class="btn boton btn-redomdo b-editar" href="<?php echo site_url('producto/formulario/'.$item_producto['id']); ?>"><i class="fas fa-edit"></i></a>
+                <a class="btn boton btn-redomdo b-eliminar" href="<?php echo site_url('producto/delete/'.$item_producto['id']); ?>"><i class="fas fa-trash-alt"></i></a>
             </td>
         </tr>
         <?php endforeach; ?>
