@@ -42,6 +42,17 @@ $config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
+| Agregamos la configuracion para el sitema
+|--------------------------------------------------------------------------
+|
+|
+*/
+
+include APPPATH . 'config/configFormularios.php';
+
+
+/*
+|--------------------------------------------------------------------------
 | URI PROTOCOL
 |--------------------------------------------------------------------------
 |
@@ -315,59 +326,7 @@ $config['cache_path'] = '';
 |
 */
 $config['cache_query_string'] = FALSE;
-/* Produntos */
-$config['tipoproductos'] = array(
-    1 => array(
-        'nombre' => 'Servicio',
-        'codigo' => 01
-    ),
-    2 => array(
-        'nombre' => 'Producto',
-        'codigo' => 01
-    )
- );
 
- $config['tarifas_iva'] = array(
-    1 => 'Tarifa 0% (Exento)',
-    2 => 'Tarifa reducida 1%',
-    3 => 'Tarifa reducida 2%',
-    4 => 'Tarifa reducida 4%',
-    5 => 'Transitorio 0%',
-    6 => 'Transitorio 4%',
-    7 => 'Transitorio 8%',
-    8 => 'Tarifa general 13%',
- );
-
- $config['medidas'] = array(
-    'Alc'  => 'Alquiler comercial',
-    'cm'   => 'Centímetro',
-    'h'    => 'Hora',
-    'kg'   => 'Kilogramo',
-    'L'    => 'Litro',
-    'm'    => 'Metro',
-    'm²'   => 'Metro cuadrado',
-    'm³'   => 'Metro cúbico',
-    'ln'   => 'Pulgada',
-    'Sp'   => 'Serv. Profesional',
-    'Unid' => 'Unidad'
- ); 
-
-
-/* Menú */
-$config['menu'] = array(
-
-    'Registros' => array(
-        'icono_categoria'=>'fas fa-file-medical',
-        'enlaces'=> array(
-            'servicio' => array(
-                'anchor'     => 'Productos',
-                'url'        => 'producto',
-                'class_icon' => 'fas fa-list'
-            )
-        )
-    )
- );
-/* Fin configuracion menu */ 
 /*
 |--------------------------------------------------------------------------
 | Encryption Key

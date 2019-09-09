@@ -42,7 +42,6 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="tema/vendor/jquery/jquery.min.js"></script>
   <script src="tema/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Page level plugin JavaScript-->

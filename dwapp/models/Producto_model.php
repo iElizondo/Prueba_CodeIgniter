@@ -19,7 +19,6 @@ class Producto_model extends CI_Model {
 
     public function set_producto($id = NULL)
     {
-        $this->load->helper('url');
 
         $data = array(
             'id_usuario' => $this->session->userdata('id_usuario'),

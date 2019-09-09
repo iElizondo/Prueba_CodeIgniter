@@ -24,6 +24,9 @@
   <!-- Mis estilos -->
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/estilos/estilos.css">
 
+  
+  <script src="tema/vendor/jquery/jquery.min.js"></script>
+  
 </head>
 
 <body class="<?=(!empty($body_class)?$body_class:'')?>">
