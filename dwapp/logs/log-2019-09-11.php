@@ -14,3 +14,19 @@ ERROR - 2019-09-11 11:59:13 --> 404 Page Not Found: Faviconico/index
 ERROR - 2019-09-11 14:24:22 --> 404 Page Not Found: Faviconico/index
 ERROR - 2019-09-11 14:27:32 --> 404 Page Not Found: Faviconico/index
 ERROR - 2019-09-11 14:31:11 --> Severity: Notice --> Undefined variable: titulo D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Cliente\index.php 1
+ERROR - 2019-09-11 15:24:00 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 15:24:41 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 15:24:45 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 15:25:15 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 15:26:18 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 15:27:23 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 15:29:20 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 15:39:37 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 15:47:40 --> Severity: Notice --> Undefined variable: producto_item D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Roles\formulario.php 11
+ERROR - 2019-09-11 15:48:03 --> Severity: error --> Exception: syntax error, unexpected '?>' D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Roles\formulario.php 11
+ERROR - 2019-09-11 15:56:33 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 16:04:16 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 16:04:49 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 16:05:08 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 16:06:37 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-11 16:06:58 --> 404 Page Not Found: Faviconico/index

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row form-general">
     <div class="col">
     <div class="encabezado">
         <h2><?php echo $titulo; ?></h2>

@@ -1,3 +1,8 @@
+/* Estilos genesrales*/
+.form-general{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .boton{
     color: white;
     width: 10%;
@@ -32,4 +37,7 @@
     color: rgb(41, 82, 136);
     width: auto;
     height: 30px;
+}
+.acction{
+    width: 12%;
 }

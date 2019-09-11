@@ -14,7 +14,7 @@
         <th scope="col">Teléfono</th>
         <th scope="col">Correo</th>
         <th scope="col">Identeficación</th>
-        <th scope="col">Acción</th>
+        <th scope="col" class="acction">Acción</th>
     </tr>
   </thead>
   <tbody>

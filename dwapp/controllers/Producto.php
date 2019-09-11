@@ -6,9 +6,7 @@ class Producto extends CI_Controller {
     
     private $vista_master = 'app/index',
     $data;
-    public $tabla         = 'servicios',
-			 $cl_titulo_plu = 'productos',
-			 $cl_titulo_sin = 'producto';
+    public $tabla         = 'servicios';
 
     function __construct(){
         parent::__construct();

@@ -56,6 +56,16 @@ $config['menu'] = array(
                 'class_icon' => 'fas fa-user-friends'
             )
         )
+    ),
+    'Sistemas' => array(
+        'icono_categoria'=>'fas fa-laptop-code',
+        'enlaces'=> array(
+          'Roles' => array(
+              'anchor'     => 'Roles',
+              'url'        => 'roles',
+              'class_icon' => 'fas fa-exclamation-triangle'
+          )
+        )
     )
  );
 /* Fin configuracion menu */ 

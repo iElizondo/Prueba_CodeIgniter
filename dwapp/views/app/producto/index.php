@@ -12,7 +12,7 @@
         <th scope="col">ID</th>
         <th scope="col">IVA</th>
         <th scope="col">Nombre</th>
-        <th scope="col">Acción</th>
+        <th scope="col" class="acction">Acción</th>
     </tr>
   </thead>
   <tbody>
