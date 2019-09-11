@@ -1,6 +1,9 @@
 <div class="row">
     <div class="col">
-    <h2><?php echo $titulo; ?></h2>
+    <div class="encabezado">
+        <h2><?php echo $titulo; ?></h2>
+        <a class="btn btn-ligh atras" href="<?php echo site_url('producto/index/'); ?>"><i class="fas fa-arrow-left">Atrás</i></a>
+    </div>
     <?php echo validation_errors(); ?>
     <form method="post">
         <div class="form-group">
@@ -52,7 +55,7 @@
             </select>
             <br/>
         </div>
-        <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" name="submit" class="btn boton b-crear">Guardar</button>
     </form>
     </div>
 </div>

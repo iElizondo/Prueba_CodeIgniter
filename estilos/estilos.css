@@ -5,6 +5,7 @@
 }
 .b-crear{
     background-color: rgb(41, 82, 136);
+    margin-bottom: 10px;
 }
 .btn-redomdo{
     width:40px;
@@ -22,4 +23,13 @@
 }
 .b-editar{
     background-color:  rgb(44, 136, 41);
+}
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+}
+.atras{
+    color: rgb(41, 82, 136);
+    width: auto;
+    height: 30px;
 }

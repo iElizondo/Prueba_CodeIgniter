@@ -36,11 +36,10 @@ class Producto_model extends CI_Model {
     }
 
     public function delete_producto($id = NULL)
-        {
-                if($id) {
-                        $this->db->where('id', $id);
-                        $this->db->delete('servicios'); 
-                }
-                 
-        }
+    {
+        if($id) {
+                $this->db->where('id', $id);
+                $this->db->delete('servicios'); 
+        }            
+    }
 }

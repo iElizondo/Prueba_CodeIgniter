@@ -17,7 +17,7 @@ class Cliente extends CI_Controller{
 
     public function index(){
         $this->data['clientes'] = $this->cliente_model->get_clientes();
-        $this->data['title'] = 'Listado de Clientes';
+        $this->data['titulo'] = 'Listado de Clientes';
         
         $this->load->view($this->vista_master, $this->data);
     }
@@ -26,8 +26,11 @@ class Cliente extends CI_Controller{
         $data = $this->input->post(NULL, TRUE);
         if ($data) {
             $this->form_validation->set_rules('nombre_completo', 'Nombre Completo', 'required');
-            $this->form_validation->set_rules('tipo', 'Tipo Identificación', 'required');
-            $this->form_validation->set_rules('identificacion', 'Identificación', 'required');
+            #$this->form_validation->set_rules('tipo', 'Tipo Identificación', 'required');
+            #print_r();
+            if($data['tipo']){
+                $this->form_validation->set_rules('identificacion', 'Identificación', 'numeric|required|min_length[9]|max_length[12]|is_unique['.$this->tabla.'.identificacion]');
+            }
             $this->form_validation->set_rules('telefono', 'Teléfono', 'required|numeric');
             $this->form_validation->set_rules('correo', 'Correo', 'required|valid_email');
             $this->form_validation->set_rules('provincia', 'Provincia', 'required');
@@ -47,5 +50,11 @@ class Cliente extends CI_Controller{
         $this->data['cliente_item'] = $this->cliente_model->get_clientes($id);
         $this->load->view($this->vista_master, $this->data);
 
+    }
+
+    public function delete($id = NULL)
+    {
+        $this->cliente_model->delete_cliente($id);
+        redirect($this->router->class, 'refresh');
     }
 }

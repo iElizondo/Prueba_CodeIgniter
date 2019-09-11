@@ -38,4 +38,12 @@ class Cliente_model extends CI_Model {
             return $this->db->insert('clientes', $data);
         }
     }
+
+    public function delete_cliente($id = NULL)
+    {
+        if($id) {
+            $this->db->where('id', $id);
+            $this->db->delete('clientes'); 
+        }            
+    }
 }

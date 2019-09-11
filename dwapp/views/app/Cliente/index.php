@@ -1,7 +1,10 @@
-<a href="<?php echo site_url('cliente/formulario'); ?>" class="btn boton b-crear">
-    <i class="fas fa-plus"></i>
-    Crear
-</a>
+<div class="encabezado">
+  <h2><?=$titulo?></h2>
+  <a href="<?php echo site_url('cliente/formulario'); ?>" class="btn boton b-crear">
+      <i class="fas fa-plus"></i>
+      Crear
+  </a>
+</div>
 
 <table class="table">
   <thead class="thead-dark">
@@ -23,7 +26,7 @@
             <td><?php echo $item_cliente['correo']; ?></td>
             <td><?php echo $item_cliente['identificacion']; ?></td>
             <td><a class="btn boton btn-redomdo b-editar" href="<?php echo site_url('cliente/formulario/'.$item_cliente['id']); ?>"><i class="fas fa-edit"></i></a>
-                <a class="btn boton btn-redomdo b-eliminar" href="<?php echo site_url('cliente/delete/'.$item_cliente['id']); ?>"><i class="fas fa-trash-alt"></i></a>
+                <a class="btn boton btn-redomdo b-eliminar" onclick="return confirm('Seguro que desea Eliminar este registro?')" href="<?php echo site_url('cliente/delete/'.$item_cliente['id']); ?>"><i class="fas fa-trash-alt"></i></a>
             </td>
         </tr>
         <?php endforeach; ?>

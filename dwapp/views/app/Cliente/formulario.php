@@ -1,7 +1,10 @@
 <div class="row">
     <div class="col">
-    <h2><?php echo $titulo; ?></h2>
-    <?php echo validation_errors(); ?>
+    <div class="encabezado">
+        <h2><?php echo $titulo; ?></h2>
+        <a class="btn btn-ligh atras" href="<?php echo site_url('cliente/index/'); ?>"><i class="fas fa-arrow-left">Atrás</i></a>
+    </div>
+    <?php echo validation_errors();?>
     <form method="post">
         <div class="form-group">
             <label for="nombre_completo">Nombre Completo</label>
@@ -13,7 +16,7 @@
                 <option value="">Seleccionar</option>
             <?php foreach ($this->config->item('identificacion') as $id => $tipo_identificacion): 
                     $activo = '';
-                    if($cliente_item['tipo_id']){
+                    if($cliente_item['tipo_id']== $id){
                         $activo = 'selected';
                     }
                 ?>
@@ -40,7 +43,8 @@
                 <option value="">Seleccionar</option>
                 <?php foreach ($this->config->item('provincias_hc') as $id => $provincia): 
                     $activo = '';
-                    if($cliente_item['id']){
+                    
+                    if($cliente_item['provincia'] == $id){
                         $activo = 'selected';
                     }
                     ?>
@@ -67,7 +71,7 @@
             <label for="otras_senas">Otras Señas</label>
             <input type="text" name="otras_senas" class="form-control" placeholder="Otras Señas" value="<?php echo $cliente_item['id'] ? $cliente_item['otrassenas'] : ""; ?>"/><br />
         </div>
-        <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" name="submit" class="btn boton b-crear">Guardar</button>
     </form>
     </div>
 </div>
@@ -79,6 +83,25 @@
     ?>
     var cantones = <?php echo json_encode($cantones);?>;
 	var distritos = <?php echo json_encode($distritos);?>;
+    
+    <?php if( ! empty($cliente_item['provincia']) ){?>
+        var id_pro    = <?=$cliente_item['provincia']?>;
+        jQuery.each( cantones[id_pro], function( id, nombre ){
+            let selected = '';
+            <?php if( ! empty($cliente_item['canton']) ){?> if(<?=$cliente_item['canton']?> == id){ selected = 'selected'; }<?php }?>
+            jQuery("#canton").append('<option '+selected+' value="'+id+'">'+nombre+'</option>');
+        });
+    <?php }?>
+
+    <?php if( ! empty($cliente_item['provincia']) && ! empty($cliente_item['canton']) ){?>
+   			var id_pro = <?=$cliente_item['provincia']?>;
+   			var id_canton = <?=$cliente_item['canton']?>;
+			jQuery.each( distritos[id_pro][id_canton], function( id, nombre ){
+				let selected = '';
+				<?php if( ! empty($cliente_item['canton']) ){?> if(<?=$cliente_item['canton']?> == id){ selected = 'selected'; }<?php }?>
+				jQuery("#distrito").append('<option '+selected+' value="'+id+'">'+nombre+'</option>');
+			});
+   		<?php }?>
 
     jQuery(document).ready(function(){
         jQuery("#provincia").change(function() {

@@ -19,7 +19,7 @@ class Producto extends CI_Controller {
 
     public function index(){
         $this->data['producto'] = $this->producto_model->get_producto();
-        $this->data['title'] = 'Listado de Productos';
+        $this->data['titulo'] = 'Listado de Productos';
         
         $this->load->view($this->vista_master, $this->data);
     }
