@@ -45,12 +45,12 @@ $config['menu'] = array(
     'Registros' => array(
         'icono_categoria'=>'fas fa-file-medical',
         'enlaces'=> array(
-            'servicio' => array(
+            'Servicio' => array(
                 'anchor'     => 'Productos',
                 'url'        => 'producto',
                 'class_icon' => 'fas fa-list'
             ),
-            'cliente' => array(
+            'Clientes' => array(
                 'anchor'     => 'Clientes',
                 'url'        => 'cliente',
                 'class_icon' => 'fas fa-user-friends'

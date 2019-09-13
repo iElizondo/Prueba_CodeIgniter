@@ -20,14 +20,31 @@ class Rol_model extends CI_Model {
     public function set_roles($id = NULL)
     {
         $data = array(
-            // 'nombre' => $this->input->post('rol'),
-            // 'tipo' => $this->input->post('secciones')
+            'rol' => $this->input->post('rol'),
+            'secciones' => $this->input->post('permisos')
         );
+        
+        foreach ($data as $key => $value) {
+            if(is_array($value)){
+                $data[$key] = serialize($value);
+            } else {
+                $data[$key] = $value;
+            }
+        }
         if($id) {
             $this->db->where('id', $id);
-            $this->db->update('servicios', $data);
+            $this->db->update('roles', $data);
         } else {
-            return $this->db->insert('servicios', $data);
+            return $this->db->insert('roles', $data);
         }
+        
+    }
+
+    public function delete_producto($id = NULL)
+    {
+        if($id) {
+                $this->db->where('id', $id);
+                $this->db->delete('roles'); 
+        }            
     }
 }
