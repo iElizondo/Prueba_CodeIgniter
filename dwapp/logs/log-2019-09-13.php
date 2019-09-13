@@ -87,3 +87,57 @@ ERROR - 2019-09-13 13:58:21 --> Severity: Warning --> Invalid argument supplied 
 ERROR - 2019-09-13 14:01:54 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Roles\formulario.php 19
 ERROR - 2019-09-13 14:01:54 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Roles\formulario.php 19
 ERROR - 2019-09-13 14:01:54 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Roles\formulario.php 19
+ERROR - 2019-09-13 14:33:56 --> Severity: Notice --> Undefined variable: item_rol D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\index.php 24
+ERROR - 2019-09-13 14:33:56 --> Severity: Notice --> Undefined variable: item_rol D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\index.php 25
+ERROR - 2019-09-13 14:48:20 --> 404 Page Not Found: Usuario/formulario
+ERROR - 2019-09-13 14:50:10 --> Severity: Notice --> Undefined index: nombre D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 31
+ERROR - 2019-09-13 14:50:10 --> Severity: Notice --> Undefined index: nombre D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 31
+ERROR - 2019-09-13 14:52:36 --> Severity: Notice --> Undefined variable: items D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:52:36 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:52:36 --> Severity: Notice --> Undefined variable: items D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:52:36 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:52:54 --> Severity: Notice --> Undefined variable: items D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:52:54 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:52:54 --> Severity: Notice --> Undefined variable: items D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:52:54 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:53:04 --> Severity: Notice --> Undefined variable: items D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:53:04 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:53:04 --> Severity: Notice --> Undefined variable: items D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:53:04 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 26
+ERROR - 2019-09-13 14:53:04 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-13 14:53:39 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-13 14:57:49 --> Severity: Notice --> Undefined index: usiario_item D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\controllers\Usuario.php 39
+ERROR - 2019-09-13 14:57:49 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-13 15:01:45 --> Severity: Notice --> Undefined index: usiario_item D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\controllers\Usuario.php 40
+ERROR - 2019-09-13 15:04:49 --> Severity: error --> Exception: syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 33
+ERROR - 2019-09-13 15:05:10 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 31
+ERROR - 2019-09-13 15:05:10 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 31
+ERROR - 2019-09-13 15:05:42 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:05:42 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:05:48 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:05:48 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:05:57 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:05:57 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:05:57 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-13 15:06:19 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:06:19 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:06:43 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:06:43 --> Severity: Notice --> Array to string conversion D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\formulario.php 32
+ERROR - 2019-09-13 15:08:15 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-13 15:16:37 --> Severity: Notice --> Undefined variable: roles D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\index.php 24
+ERROR - 2019-09-13 15:16:37 --> Severity: Warning --> Invalid argument supplied for foreach() D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\views\app\Usuario\index.php 24
+ERROR - 2019-09-13 15:21:57 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-13 15:46:13 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-13 15:51:09 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-09-13 16:19:01 --> Severity: error --> Exception: syntax error, unexpected 'if' (T_IF) D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 29
+ERROR - 2019-09-13 16:19:33 --> Severity: Notice --> Undefined index: contrasena D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 28
+ERROR - 2019-09-13 16:20:21 --> Severity: Notice --> Undefined index: contrasena D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 28
+ERROR - 2019-09-13 16:20:53 --> Severity: Notice --> Undefined index: contrasena D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 28
+ERROR - 2019-09-13 16:21:24 --> Severity: Notice --> Undefined index: contrasena D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 28
+ERROR - 2019-09-13 16:21:52 --> Severity: Notice --> Undefined index: contrasena D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 28
+ERROR - 2019-09-13 16:23:04 --> Severity: Notice --> Undefined index: contrasena D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 28
+ERROR - 2019-09-13 16:23:09 --> Severity: Notice --> Undefined index: contrasena D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 28
+ERROR - 2019-09-13 16:23:14 --> Severity: Notice --> Undefined index: contrasena D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 28
+ERROR - 2019-09-13 16:24:18 --> Severity: Notice --> Undefined index: contrasena D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\models\Usuario_model.php 30
+ERROR - 2019-09-13 16:29:25 --> Severity: error --> Exception: syntax error, unexpected '$this' (T_VARIABLE) D:\wamp\www\IsabelElizondo\Prueba-CodeIgniter\Prueba_CodeIgniter\dwapp\controllers\Usuario.php 28
+ERROR - 2019-09-13 16:33:46 --> 404 Page Not Found: Faviconico/index

@@ -64,6 +64,11 @@ $config['menu'] = array(
               'anchor'     => 'Roles',
               'url'        => 'roles',
               'class_icon' => 'fas fa-exclamation-triangle'
+          ),
+          'Usuarios' => array(
+            'anchor'     => 'Usuarios',
+            'url'        => 'usuario',
+            'class_icon' => 'fas fa-user'
           )
         )
     )
